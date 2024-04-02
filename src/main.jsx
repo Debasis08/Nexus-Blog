@@ -13,12 +13,6 @@ import Post from "./pages/Post";
 import AllPosts from "./pages/AllPosts";
 import Home from './pages/Home.jsx';
 import { inject } from '@vercel/analytics';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-<Router>
-  <Route path="/all-posts" component={AllPosts} />
-</Router> 
-
 
 inject();
 
