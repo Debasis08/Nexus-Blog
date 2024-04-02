@@ -40,18 +40,19 @@ function Header() {
     <header className=' lg:h-20 md:h-28 h-24 z-40 bg-theme-300 border-b-4 border-white text-theme-400 rounded-lg sticky top-0 font-bold'>
       {/* <Container> */}
         <nav className='flex'>
-          <div className='lg:flex lg:h-14 lg:w-96 lg:mt-3 md:w-32 md:mt-5 md:ml-16 md:my-auto mr-4 ml-2 flex-none w-28 h-22'>
+{/*           <div className='lg:flex lg:h-14 lg:w-96 lg:mt-3 md:w-32 md:mt-5 md:ml-16 md:my-auto mr-4 ml-2 flex-none w-28 h-22'>
           <div className='lg:w-1/4 md:w-32 w-36'>
           <Link to='/'>
             <Logo width='20px' />
 
           </Link>
+          </div> */}
+         <div className='flex xl:h-32 lg:h-20 md:h-28 h-24 md:w-2/5 lg:w-3/6 justify-center items-center text-3xl md:text-3xl xl:text-7xl font-serif text-center lg:justify-center lg:items-center w-3/5'>
+            <h className="gradientText text-3xl md:text-3xl xl:text-5xl"
+            ><Link to='/'> NEXUS BLOG</Link></h>
           </div>
-          <div className='text-theme-400 text-4xl font-serif text-center lg:flex lg:justify-center lg:items-center w-3/4 left-10 hidden'>
-            <span><Link to='/'> NEXUS BLOG</Link></span>
-          </div>
-          </div>
-          <ul className= 'lg:pl-12 pr-1 xl:pl-52 md:w-3/5 ml-auto flex items-end'>
+          {/* </div> */}
+          <ul className= 'lg:pl-10 pr-1 xl:pl-52 md:w-2/5 w-3/5 ml-auto flex justify-end items-center'>
             {navItems.map((item) =>
             item.active ? (
               <li key={item.name}>
