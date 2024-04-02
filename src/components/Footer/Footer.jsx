@@ -119,9 +119,8 @@ function Footer() {
 
                         <div className="flex h-full w-1/2 flex-col lg:mt-5 text-center">
                             <div className="mb-4 mx-auto w-28 md:w-40 flex justify-center">
-                                <Link to='/'>
-                                    <Logo/>
-                                </Link>
+                                <h className="gradientText text-3xl font-serif md:text-3xl font-semibold xl:text-5xl"
+                                ><Link to='/'> NEXUS BLOG</Link></h>
                             </div>
                             <div>
                                 <p className="text-sm md:text-xs text-black">
