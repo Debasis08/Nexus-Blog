@@ -16,7 +16,7 @@ import { inject } from '@vercel/analytics';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 <Router>
-  <Route path="/all-posts" component={AllPostsComponent} />
+  <Route path="/all-posts" component={AllPosts} />
 </Router>
 
 inject();
