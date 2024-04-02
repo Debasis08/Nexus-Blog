@@ -20,6 +20,15 @@
   }
 } */
 
+.gradientText {
+  background: linear-gradient(to bottom right, #1e186e, #041490, #0631ef);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color:transparent;
+  text-shadow: 2px 3px 3px rgba(32, 36, 119, 0.7);
+}
+
 label {
   color: #424874;
   font-weight: 500;
