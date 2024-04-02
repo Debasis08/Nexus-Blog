@@ -47,7 +47,7 @@ function Header() {
 
           </Link>
           </div> */}
-         <div className='flex xl:h-28 lg:h-18 md:h-24 h-22 md:w-2/5 lg:w-3/6 justify-center items-center text-3xl md:text-3xl xl:text-7xl font-serif text-center lg:justify-center lg:items-center w-3/5'>
+         <div className='bg-theme-200 flex xl:h-28 lg:h-18 md:h-24 h-22 md:w-2/5 lg:w-3/6 justify-center items-center text-3xl md:text-3xl xl:text-7xl font-serif text-center lg:justify-center lg:items-center w-3/5'>
             <h className="gradientText text-3xl md:text-3xl xl:text-5xl"
             ><Link to='/'> NEXUS BLOG</Link></h>
           </div>
