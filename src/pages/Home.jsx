@@ -24,10 +24,10 @@ export default function Home() {
                 return (
                 <div className='h-full xl:flex xl:justify-center w-full'>
                 <Container>
-                        <div className=" my-auto text-cente pt-11 md:pt-24 xl:pt-40 h-full  ">
+                        <div className=" my-auto text-center pt-11 md:pt-24 xl:pt-40 h-full  ">
                             <h1 className="text-xl font-mono md:text-4xl text-theme-400 font-bold hover:text-indigo-950">
                                 Kindly Login to Read Posts <br/>
-                                (Still in Progress)
+                                (Still in Production)
                             </h1>
                         </div>
                 </Container>
