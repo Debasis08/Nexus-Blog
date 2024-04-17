@@ -4,6 +4,8 @@ import appwriteService from "../appwrite/configure";
 import { Button, Container } from "../components";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Post() {
     const [post, setPost] = useState(null);
@@ -44,6 +46,8 @@ export default function Post() {
                     />
                     
                 </div>
+
+            <ToastContainer/>
 
                 <div className="w-4/5 text-black mt-10 mx-auto font-thin border-white relative bg-gradient-to-br from-theme-400 to-white shadow-2xl shadow-theme-300 drop-shadow-2xl rounded-lg group">
                 {isAuthor && (
