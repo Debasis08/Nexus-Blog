@@ -1,5 +1,7 @@
 import config from '../config/config.js';
 import { Client, Account, ID} from "appwrite";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export class AuthService {
     client = new Client();
@@ -25,6 +27,8 @@ export class AuthService {
             }
         } catch (error) {
             throw error;
+            toast.error(error.message,
+            {theme: "colored"})
         }
     }
 
@@ -33,6 +37,8 @@ export class AuthService {
             return await this.account.createEmailSession(email, password);
         } catch (error) {
             throw error;
+            toast.error(error.message,
+            {theme: "colored"})
         }
     }
 
@@ -40,6 +46,8 @@ export class AuthService {
         try {
             return await this.account.get();
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite Service :: getCurrentUser :: error", error);
         }
         return null;
@@ -49,6 +57,8 @@ export class AuthService {
         try {
             await this.account.deleteSessions();
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite Service :: logOut :: error", error);
             
         }
