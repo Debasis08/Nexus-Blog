@@ -5,6 +5,8 @@ import {Button, Input, Logo} from "./index"
 import { useDispatch } from 'react-redux'
 import authService from "../appwrite/auth"
 import {useForm} from "react-hook-form"
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
     const navigate = useNavigate()
@@ -22,7 +24,9 @@ function Login() {
                 navigate("/")
             }
         } catch (error) {
-            setError(error.message)
+            // setError(error.message)
+            toast.error(error.message, //From
+            {theme: "colored"})
         }
     }
 
