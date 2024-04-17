@@ -5,6 +5,8 @@ import {login} from '../store/authSlice'
 import {Button, Input, Logo} from './index'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
 
@@ -23,7 +25,9 @@ function Signup() {
                 navigate("/")
             }
         } catch (error) {
-            setError(error.message)
+            // setError(error.message)
+            toast.error(error.message, //From
+            {theme: "colored"})
         }
     }
 
@@ -45,6 +49,8 @@ function Signup() {
                     </Link>
                 </p>
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
+
+                <ToastContainer/>
 
                 <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
