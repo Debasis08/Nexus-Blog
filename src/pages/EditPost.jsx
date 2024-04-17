@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { Container, PostForm } from '../components'
 import appwriteService from "../appwrite/configure"
 import { useNavigate, useParams } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function EditPost() {
     const [post, setPosts] = useState(null)
@@ -21,6 +23,7 @@ function EditPost() {
     }, [slug, navigate])
   return post ? (
     <div className='py-8'>
+     <ToastContainer/>
       <Container>
         <PostForm post = {post} />
       </Container>
