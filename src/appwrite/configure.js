@@ -1,5 +1,7 @@
 import config from '../config/config';
 import { Client, Databases, ID, Storage, Query} from "appwrite";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export class Service{
     client = new Client();
@@ -29,6 +31,8 @@ export class Service{
                 }
             )
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite service :: createPost :: error", error);
         }
     }
@@ -47,6 +51,8 @@ export class Service{
                 }
             )
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite service :: updatePost :: error", error);
         }
     }
@@ -60,6 +66,8 @@ export class Service{
             )
             return true
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite service :: deletePost :: error", error);
             return false
         }
@@ -73,6 +81,8 @@ export class Service{
                 slug
             )
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite service :: getPost :: error", error);
             return false
         }
@@ -86,6 +96,8 @@ export class Service{
                 queries,
             )
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite service :: getPosts :: error", error);
             return false
         }
@@ -101,6 +113,8 @@ export class Service{
                 file
             )
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite service :: uploadFile :: error", error);
             return false
         }
@@ -114,6 +128,8 @@ export class Service{
             )
             return true
         } catch (error) {
+            toast.error(error.message,
+            {theme: "colored"})
             console.log("Appwrite service :: deleteFile :: error", error);
             return false
         }
