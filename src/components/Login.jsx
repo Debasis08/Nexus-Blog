@@ -24,7 +24,7 @@ function Login() {
                 navigate("/")
             }
         } catch (error) {
-            // setError(error.message)
+            setError(error.message)
             toast.error(error.message, //From
             {theme: "colored"})
         }
