@@ -2,13 +2,18 @@ import React, {useEffect, useState} from 'react'
 import appwriteService from "../appwrite/configure"
 import { Container, PostCard } from '../components'
 import { useSelector } from 'react-redux'
+import Spinner from '../components/Spinner'
+
 
 export default function Home() {
     const authStatus = useSelector((state) => state.auth.status)
-
+    const [loader, setLoader] = useState(true)
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoader(false);
+        }, 3000);
         appwriteService.getPosts().then((posts) => {
             if (posts) {
                 setPosts(posts.documents)
@@ -34,7 +39,7 @@ export default function Home() {
                 </div>
                 )
             } else if (posts.length===0) {
-                return (
+                return (loader ? <Spinner/> :
                     <div className='flex flex-col md:pt-20 lg:pt-40 pt-10 text-center '>
                         <div className='text-2xl font-bold top-0 text-theme-400 hover:text-opacity-90'>
                         A Few Moments....
