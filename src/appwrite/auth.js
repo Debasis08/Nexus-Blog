@@ -1,7 +1,5 @@
 import config from '../config/config.js';
 import { Client, Account, ID} from "appwrite";
-import { ToastContainer, toast } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
 
 export class AuthService {
     client = new Client();
