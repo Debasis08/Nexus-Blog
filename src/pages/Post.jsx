@@ -6,9 +6,13 @@ import parse from "html-react-parser";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from '../components/Spinner'
+
 
 export default function Post() {
     const [post, setPost] = useState(null);
+    const [loader, setLoader] = useState(true)
+    
     const { slug } = useParams();
     const navigate = useNavigate();
 
@@ -17,6 +21,10 @@ export default function Post() {
     const isAuthor = post && userData ? post.userId === userData.$id : false;
 
     useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoader(false);
+        }, 3000);
+        
         if (slug) {
             appwriteService.getPost(slug).then((post) => {
                 if (post) setPost(post);
@@ -34,7 +42,7 @@ export default function Post() {
         });
     };
 
-    return post ? (
+    return post ? (loader ? <Spinner/> :
         <div className="bg-theme-400 flex flex-col min-h-screen py-10">
             {/* <Container> */}
             
