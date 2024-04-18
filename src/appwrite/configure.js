@@ -31,7 +31,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            toast.error(error.message,
+            toast.error("Unable to Post !",
             {theme: "colored"})
             console.log("Appwrite service :: createPost :: error", error);
         }
@@ -51,7 +51,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            toast.error(error.message,
+            toast.error("Something Went Wrong !",
             {theme: "colored"})
             console.log("Appwrite service :: updatePost :: error", error);
         }
@@ -66,7 +66,7 @@ export class Service{
             )
             return true
         } catch (error) {
-            toast.error(error.message,
+            toast.error("Unable to delete the Post !",
             {theme: "colored"})
             console.log("Appwrite service :: deletePost :: error", error);
             return false
@@ -81,7 +81,7 @@ export class Service{
                 slug
             )
         } catch (error) {
-            toast.error(error.message,
+            toast.error("Unable to Fetch Post !",
             {theme: "colored"})
             console.log("Appwrite service :: getPost :: error", error);
             return false
@@ -96,7 +96,7 @@ export class Service{
                 queries,
             )
         } catch (error) {
-            toast.error(error.message,
+            toast.error("Unable to Fetch Posts !",
             {theme: "colored"})
             console.log("Appwrite service :: getPosts :: error", error);
             return false
@@ -113,7 +113,7 @@ export class Service{
                 file
             )
         } catch (error) {
-            toast.error(error.message,
+            toast.error("Unable to upload the File !",
             {theme: "colored"})
             console.log("Appwrite service :: uploadFile :: error", error);
             return false
@@ -128,7 +128,7 @@ export class Service{
             )
             return true
         } catch (error) {
-            toast.error(error.message,
+            toast.error("Unable to delete the File !",
             {theme: "colored"})
             console.log("Appwrite service :: deleteFile :: error", error);
             return false
