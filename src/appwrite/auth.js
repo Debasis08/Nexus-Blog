@@ -27,7 +27,7 @@ export class AuthService {
             }
         } catch (error) {
             throw error;
-            toast.error("Something Went Wrong !",
+            toast.error("Unable to Create an Account !",
             {theme: "colored"})
         }
     }
@@ -37,7 +37,7 @@ export class AuthService {
             return await this.account.createEmailSession(email, password);
         } catch (error) {
             throw error;
-            toast.error("Something Went Wrong !",
+            toast.error("Unable to Login !",
             {theme: "colored"})
         }
     }
@@ -46,7 +46,7 @@ export class AuthService {
         try {
             return await this.account.get();
         } catch (error) {
-            toast.error("Something Went Wrong !",
+            toast.error("Unable to Fetch Data !",
             {theme: "colored"})
             console.log("Appwrite Service :: getCurrentUser :: error", error);
         }
@@ -57,7 +57,7 @@ export class AuthService {
         try {
             await this.account.deleteSessions();
         } catch (error) {
-            toast.error("Something Went Wrong !",
+            toast.error("Unable to Logout !",
             {theme: "colored"})
             console.log("Appwrite Service :: logOut :: error", error);
             
