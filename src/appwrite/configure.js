@@ -96,8 +96,6 @@ export class Service{
                 queries,
             )
         } catch (error) {
-            toast.error("Unable to Fetch Posts !",
-            {theme: "colored"})
             console.log("Appwrite service :: getPosts :: error", error);
             return false
         }
