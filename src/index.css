@@ -128,7 +128,7 @@ input[type=file] {
 
 
 .coverImage {
-    background-image: url('../image/Cover\ Pic.jpg');
+    background-image: url('../image/Cover Pic.jpg');
     opacity: 0.6; 
     background-size: cover; /* or contain */
     background-position: center;
