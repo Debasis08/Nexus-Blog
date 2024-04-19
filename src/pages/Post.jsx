@@ -42,11 +42,12 @@ export default function Post() {
         });
     };
 
-    return post ? (loader ? <Spinner/> :
-        <div className="bg-theme-400 flex flex-col min-h-screen py-10">
+       return post ? (
+        loader ? <Spinner/> :
+        <div className="bg-theme-400 flex flex-col min-h-screen py-10 ">
             {/* <Container> */}
             
-                <div className=" bg-theme-300 w-2/3 mx-auto shadow-2xl shadow-theme-300 rounded-2xl ">
+            <div className=" bg-theme-300 w-2/3 mx-auto shadow-2xl shadow-theme-200 rounded-2xl ">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
@@ -55,34 +56,36 @@ export default function Post() {
                     
                 </div>
 
-            <ToastContainer/>
-
-                <div className="w-4/5 text-black mt-10 mx-auto font-thin border-white relative bg-gradient-to-br from-theme-400 to-white shadow-2xl shadow-theme-300 drop-shadow-2xl rounded-lg group">
+                <div className="w-4/5 pad mt-10 mx-auto font-thin border-theme-300 relative shadow-2xl shadow-theme-200 drop-shadow-2xl rounded-lg group">
                 {isAuthor && (
                     <div className="absolute z-20">
                         <div className="group-hover:inline-block h-0 hidden">
                             <Link to={`/edit-post/${post.$id}`}>
-                                <Button className="bg-opacity-0 hover:bg-opacity-40 hover:bg-theme-400">
-                                    ✏️
+                                <Button className="bg-opacity-0 hover:bg-opacity-40 border-none bg-theme-100 hover:bg-theme-200">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbElEQVR4nO3SsQ2AMAxE0b8AM8EqiEFwyQyZDUZAjOAUhAYRKGJT+aRr30mWIXJmAjbgABLQYRgB9NbkPbBbwP3LyNqKS4GkMjJa4FoZEUtcS5cW9Au/OuCIz4FrnOWXb8EbxxvHG8cbj/CUDMTueTOAku8eAAAAAElFTkSuQmCC" />
                                 </Button>
                             </Link>
                         </div>
                         <div className="group-hover:inline-block h-0 bg-theme-400 hidden ">
-                                <Button className="bg-opacity-0 hover:bg-opacity-40 hover:bg-theme-400" onClick={deletePost}>
-                                    🗑️
+                                <Button className="bg-opacity-0 hover:bg-opacity-40 border-none hover:bg-theme-200" onClick={deletePost}>
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nOWUMUsCUBhFz2KD0H8I/AEO7kG7ge2BRNIi2FpEILg0SK7qWjSEremsBA25iTYbuFRzEKUh3CBaup8EIV142znvvOnBf1kZmH07J4tcNPul83eB+YaCSkDWPCU5A4x1BFcCgYqcayfQFFwPBBpfnB93LLgVCFzJOXICecHdQKAnZ9sJbAgeBQL3ctadQErwUyDwLGfNCawA78AUyBmX58S+AQnMTfSiXSNQEPtAYLeSDozAodibSOBS0qkRqIm9iASqks6MwPkiv+u+pLYR+PxaipHAlqQ7I9AXuxkJZCSNjcBYbDoSWAVeA///C5AkuD3g0bh8zuxEL1+efQCsqKh0ZVto4QAAAABJRU5ErkJggg==" />
                                 </Button>
                         </div>
                     </div>
                     )}
-                <div className="z-10 w-full mb-6  pt-5 relative text-center group">
+                <div className="z-10 w-full mb-6  pt-5 relative text-center">
                     <h1 className="xl:text-3xl text-2xl font-medium">{post.title}</h1>
                 </div>
                 
-                <div className="xl:text-xl browser-css reltive p-5 text-center font-normal h-auto font-sans group-hover:opacity-70">
+                <div className="xl:text-xl relative p-5 text-center font-normal h-auto">
                     {parse(post.content)}
                 </div>
                 </div>
             {/* </Container> */}
         </div>
-    ) : null;
+    ) : 
+    <div>
+        Unfortunately, No Posts !
+    </div>;
+
 }
