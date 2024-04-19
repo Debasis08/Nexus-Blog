@@ -3,14 +3,15 @@ import React from 'react'
 export default function Button({
     children,
     type = 'button',
-    bgColor = 'bg-theme-300',
+    bgColor = 'bg-greyish hover:bg-sky',
     textSize = 'text-xl',
-    textColor = 'text-theme-400',
+    textColor = 'text-sky hover:text-greyish',
+    border = 'border-2 border-sky',
     className = '',
     ...props
 }) {
   return (
-    <button className= {`px-4 py-2 rounded-2xl ${className} ${textSize} ${bgColor} ${textColor}`} {...props}>
+    <button className= {`px-4 py-2 focus:shadow-inner shadow-theme-400 rounded-2xl ${border} ${className} ${textSize} ${bgColor} ${textColor}`} {...props}>
       {children}
     </button>
   )
