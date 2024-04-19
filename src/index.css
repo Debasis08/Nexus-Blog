@@ -17,7 +17,6 @@
 
 .gradientText2 {
   background: linear-gradient(to bottom right, rgb(242, 246, 190) 40%, #42fff2); /* Replace with path to your background image */
-  background-blend-mode: multiply;  /* Makes the text darker where it overlaps the image */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
