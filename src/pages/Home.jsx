@@ -29,20 +29,20 @@ export default function Home() {
     // const cardsColumn2 = posts.slice(midIndex);
 
     return (loader ? <Spinner/> :
-    <div className='h-full w-full'>
-                    <div className='bg-cover opacity-45'>
+    <div className='h-full w-full gra coverImage'>
+                    {/* <div className='bg-cover opacity-45'>
                     <img src={coverpic}/>
-                    </div>
-                    <div className='opacity-90 rounded-xl w-full scale-90 items-center flex flex-row '>
-                        <div className='w-2/5 h-full text-center picsection mx-auto'>/
+                    </div> */}
+                    <div className='bg-opacity-100 filter-none rounded-xl w-full grayscale-0 scale-90 items-center flex flex-row '>
+                        <div className='w-2/5 h-full text-center scale-85 border mr-3 md:scale-75 border-sky picsection mx-auto'>
                             <img src={mypic} className='scale-90 rounded-full mx-auto'/>
-                            <div className='p-2 mb-2 text-white'>
-                                 Hello! It&apos;s Debasis <br/>A <span className=" font-bold">Frontend Developer</span> from Bangalore, India
+                            <div className='p-2 mb-2 text-white md:text-xl lg:text-3xl'>
+                                 Hello! 👋👋 It&apos;s Debasis <br/>A <span className=" font-bold">Frontend Developer</span> from Bangalore, India
                             </div>
                         </div>
              
-                        <div className='text-white p-3 text-sm description w-3/5 h-full'>
-                           <span className='text-center'> Welcome to <span className='gradientText2 font-semibold text-2xl'>Nexus</span>, the Blog.</span> <br/><br/> This is one of my mega projects in which I have integrated authentication using mail id Credentials.<br/> CRUD operations including some other npm packages for better UX has been introduced.<br/><br/> <span className=' text-theme-100'>Feel Free to <Link to="./signup" className='hover:text-sky underline font-semibold'>Sign-Up</Link> and Upload your first Blog</span> <br/> You can also <Link to="login" className='hover:text-sky underline font-semibold'>login</Link> to your account and check posts.
+                        <div className='text-white shadow-inner lg:scale-110 lg:pb-3 shadow-sky border-sky border-4 p-3 text-sm md:text-lg lg:text-2xl description w-3/5 h-96'>
+                           <span className='block text-center pt-7'> Welcome to <span className='gradientText2 font-semibold text-2xl lg:text-4xl lg:font-extrabold'>Nexus</span>, the Blog.</span><br/> You can use me to check blogs of people around the world.<br/> You can post blog on your cherished moments of trips or your beloved food item experience.<br/><br/><br/> <span className=' text-theme-100 block text-center'>Feel Free to <Link to="./signup" className='hover:text-sky underline font-semibold'>Sign-Up</Link> and Upload your first Blog <br/><br/> You can also <Link to="login" className='hover:text-sky underline font-semibold'>login</Link> to your account and check posts.</span>
                         </div>
                     </div>
                         
