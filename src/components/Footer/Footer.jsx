@@ -4,7 +4,7 @@ import Logo from '../Logo'
 
 function Footer() {
   return (
-    <section className=" md:w-full md:h-60 overflow-hidden mt-auto py-3 bg-theme-300 border-t-4 bottom-0 border-white rounded-lg">
+    <section className="  text-white md:w-full md:h-60 overflow-hidden mt-auto py-3 bg-theme-300 rounded-b-lg drop-shadow-2xl shadow-theme-200">
             <div className="mx-auto max-w-7xl px-2">
                 <div className=" lg:m-0 m-3 lg:items-center flex flex-wrap md:flex-no-wrap">
                     
@@ -117,13 +117,13 @@ function Footer() {
                             </ul>
                         </div>
 
-                        <div className="flex h-full w-1/2 flex-col lg:mt-5 text-center">
+                       <div className="flex h-full w-1/2 flex-col lg:mt-5 text-center">
                             <div className="mb-4 mx-auto w-28 md:w-40 flex justify-center">
-                                <h className="gradientText text-3xl font-serif md:text-3xl font-semibold xl:text-5xl"
+                                <h className="gradientText font-semibold text-3xl md:text-3xl xl:text-5xl"
                                 ><Link to='/'> NEXUS BLOG</Link></h>
                             </div>
                             <div>
-                                <p className="text-sm md:text-xs text-black">
+                                <p className="text-sm md:text-xs">
                                     &copy; Copyright 2023. All Rights Reserved by Developer.
                                 </p>
                             </div>
