@@ -125,3 +125,12 @@ input[type=file] {
   transform: translateY(-50%); /* Offset the overlaid div upwards by half its own height */
   /* background-color: #ccc; */
 }
+
+
+.coverImage {
+    background-image: url('../image/Cover\ Pic.jpg');
+    opacity: 0.6; 
+    background-size: cover; /* or contain */
+    background-position: center;
+    background-repeat: no-repeat;
+}
