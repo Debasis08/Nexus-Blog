@@ -31,18 +31,18 @@ function Login() {
     }
 
   return (
-    <div className='flex items-center justify-center m-7'>
-      <div className='mx-auto rounded-2xl w-full max-w-lg bg-theme-300 p-10 border-2 border-theme-300'>
+    <div className='flex items-center justify-center m-7 rounded-2xl'>
+      <div className='mx-auto rounded-2xl w-full max-w-lg bg-theme-300 p-10 border-2 border-sky'>
       <div className="mb-2 flex justify-center">
                     <h className="gradientText text-3xl font-serif md:text-3xl font-semibold xl:text-5xl"
                                 ><Link to='/'> NEXUS BLOG</Link></h>
         </div>
-        <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <h2 className="text-center text-theme-100 text-2xl font-bold leading-tight">Sign in to your account</h2>
+        <p className="mt-2 text-theme-100 text-center text-base">
                     Don&apos;t have any account?&nbsp;
                     <Link
                         to="/signup"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium text-primary transition-all duration-200 hover:underline focus:text-sky"
                     >
                         Sign Up
                     </Link>
@@ -76,7 +76,7 @@ function Login() {
                 />
                 <Button
                 type="submit"
-                className="w-full bg-white hover:bg-theme-400 hover:text-white border-2 border-theme-400"
+                className="w-full bg-white hover:bg-sky hover:text-white border-4 border-sky"
                 ><strong>Sign in</strong></Button>
             </div>
         </form>
