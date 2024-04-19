@@ -9,11 +9,14 @@ export default {
     colors: {
       'theme': {
         100: '#F4EEFF',
-        200: '#DCD6F7',
-        300: '#A6B1E1',
-        400: '#424874',
+        200: '#191f28',
+        300: '#222831',
+        400: '#393E46',
       },
       'indigo': {950: '#1e1b4b' },
+      'sky': '#00ADB5',
+      'greyish': '#EEEEEE',
+      'red': '#FF204E',
       'white': '#ffff',
     },
   },
