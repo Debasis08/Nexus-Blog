@@ -2,46 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .footer-container {
-    position:fixed;
-    bottom: 0;
-    width: 100%;
-  } */
-
-  /* @media (max-width: 1025px) {
-    .footer-container {
-        position: relative;
-    }
-}
-
-@media (min-width: 770) {
-  .footer-container {
-      position: fixed;
-  }
-} */
 
 .gradientText {
-  background: linear-gradient(to bottom right, #1e186e, #041490, #0631ef);
+  background: linear-gradient(to bottom right, rgb(140, 143, 98), #00ADB5); /* Replace with path to your background image */
+  background-blend-mode: multiply;  /* Makes the text darker where it overlaps the image */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color:transparent;
-  text-shadow: 2px 3px 3px rgba(32, 36, 119, 0.7);
+  color: transparent;
+  text-shadow: none;
+  font-family: Roboto;
+}
+
+
+.gradientText2 {
+  background: linear-gradient(to bottom right, rgb(242, 246, 190) 40%, #42fff2); /* Replace with path to your background image */
+  background-blend-mode: multiply;  /* Makes the text darker where it overlaps the image */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+  font-family: Roboto;
+}
+
+
+.scale-65 {
+  --tw-scale-x: .65;
+  --tw-scale-y: .65;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+
+.pad {
+  background: linear-gradient(to bottom, #93959a 20%, rgb(225, 224, 224) 80%);
+  border-width: 7px;
+}
+
+
+.icon1 {
+  background-color: transparent; /* Set background to transparent for blending */
+  background-blend-mode: multiply;
 }
 
 label {
-  color: #424874;
+  color: #aad6c1;
   font-weight: 500;
-
 }
+
+/* baf {
+color: #191f28
+} */
 
 input[type=file] {
   display: block;
-  color: white;
+  color: #292d33c8;
   width: 100%;
   font-family: Verdana;
 }
 
 .height {
   height:50vh;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black; 
+  border-radius: 5px;
+  background: #595e66c8;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #393e46c8; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #292d33c8; 
+}
+
+
+.description {
+  background-color: rgba(52, 56, 62, 0.805);
+  border-top-right-radius: 0.75rem/* 12px */;
+  border-bottom-right-radius: 0.75rem/* 12px */;
+  border-top-left-radius: 0.75rem/* 12px */;
+  border-bottom-left-radius: 0.75rem/* 12px */;
+}
+
+
+.picsection {
+  background-color: rgb(41, 46, 53);
+  border-top-left-radius: 0.75rem/* 12px */;
+  border-bottom-left-radius: 0.75rem/* 12px */;
+  border-top-right-radius: 0.75rem/* 12px */;
+  border-bottom-right-radius: 0.75rem/* 12px */;
+}
+
+
+.container {
+  position: relative; /* Enable relative positioning for child elements */
+  height: 200px; /* Set desired height for container (optional) */
+}
+
+.top-div {
+  background-color: #eee;
+  width: 100vw;
+  height: 50%; /* Set height of top div to 50% of container */
+}
+
+.overlaid-div {
+  position: relative; /* Make overlaid div positioned relative to container */
+  top: 30vh; /* Position the top edge of the overlaid div at 50% */
+  transform: translateY(-50%); /* Offset the overlaid div upwards by half its own height */
+  /* background-color: #ccc; */
 }
