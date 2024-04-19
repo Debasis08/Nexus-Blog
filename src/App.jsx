@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   return !loading ? (
-    <div className='min-h-screen rounded-2xl flex bottom-0 w-screen flex-col content-between bg-theme-100'>
+    <div className='min-h-screen rounded-2xl flex bottom-0 w-screen flex-col content-between bg-theme-200'>
       <Header />
       <div className='w-full h-full block'>
         
