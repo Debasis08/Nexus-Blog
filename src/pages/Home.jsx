@@ -3,6 +3,8 @@ import appwriteService from "../appwrite/configure"
 import { Container, PostCard } from '../components'
 import { useSelector } from 'react-redux'
 import Spinner from '../components/Spinner'
+import coverpic from '../../image/Cover Pic.jpg'
+import mypic from '../../image/mypic.png'
 
 
 export default function Home() {
