@@ -26,12 +26,11 @@ export default function AllPosts() {
     if (posts.length===0) {
       return (loader ? <Spinner/> :
           <div className='flex flex-col md:pt-20 lg:pt-40 pt-10 text-center text-white '>
-            <div className='text-2xl font-bold top-0 text-theme-400 hover:text-opacity-90'>
-            A Few Moments....
+            <div className='text-2xl font-bold top-0 text-white hover:text-opacity-90'>
+            Hey ! I think, there are no Blogs posted yet...
             </div>
-            <div className='text-sm font-normal text-theme-300 '>
-            (Blogs will show up if there are any)<br/>
-            (Reload the page in case available Blogs doesn't show up)
+            <div className='text-sm font-normal text-white '>
+            How about you post one ! 😊
             </div>
           </div>
       )
