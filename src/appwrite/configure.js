@@ -31,7 +31,7 @@ export class Service{
                 }
             )
         } catch (error) {
-            toast.error("Unable to Post !",
+            toast.error("Unable to Post due to Character Limit Exceed!",
             {theme: "colored"})
             console.log("Appwrite service :: createPost :: error", error);
         }
