@@ -93,7 +93,7 @@ export default function PostForm({post}) {
                 <input
                     label = "Tap to Upload"                
                     type="file"
-                    className="mb-4 bg-theme-300 rounded"
+                    className="mb-4 bg-theme-300 rounded text-white"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
