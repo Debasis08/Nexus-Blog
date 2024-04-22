@@ -39,14 +39,14 @@ export default function AllPosts() {
     <div className='w-full lg:p-10 flex justify-center md:pl-56 p-8 overflow-auto bg-theme-400'>
         <Container>
                 <div className='grid w-1/2 pr-2 h-full xl:pr-6 gap-3 xl:gap-10 md:gap-5 grid-cols-1'>
-                    {cardsColumn1.map((post) => (
+                    {cardsColumn1.reverse().map((post) => (
                         <div key={post.$id} className='rounded-xl'>
                             <PostCard {...post} />
                         </div>
                     ))}
                 </div>
                 <div className='grid w-1/2 h-full pl-2 xl:pl-6 gap-3 xl:gap-10 md:gap-5 grid-cols-1'>
-                    {cardsColumn2.map((post) => (
+                    {cardsColumn2.reverse().map((post) => (
                         <div key={post.$id} className='rounded-xl'>
                             <PostCard {...post} />
                         </div>
