@@ -28,7 +28,7 @@ export default function Post() {
         if (slug) {
             appwriteService.getPost(slug).then((post) => {
                 if (post) setPost(post);
-                else navigate("/");
+                else navigate("/all-posts");
             });
         } else navigate("/");
     }, [slug, navigate]);
@@ -37,7 +37,7 @@ export default function Post() {
         appwriteService.deletePost(post.$id).then((status) => {
             if (status) {
                 appwriteService.deleteFile(post.featuredImage);
-                navigate("/");
+                navigate("/all-posts");
             }
         });
     };
@@ -51,6 +51,7 @@ export default function Post() {
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
+                        title={post.title}
                         className="rounded-xl w-full h-auto scale-90"
                     />
                     
@@ -59,14 +60,14 @@ export default function Post() {
                 <div className="w-4/5 pad mt-10 mx-auto font-thin border-theme-300 relative shadow-2xl shadow-theme-200 drop-shadow-2xl rounded-lg group">
                 {isAuthor && (
                     <div className="absolute z-20">
-                        <div className="group-hover:inline-block h-0 hidden">
+                        <div className="group-hover:inline-block h-0 inline-block lg:hidden">
                             <Link to={`/edit-post/${post.$id}`}>
                                 <Button className="bg-opacity-0 hover:bg-opacity-40 border-none bg-theme-100 hover:bg-theme-200">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbElEQVR4nO3SsQ2AMAxE0b8AM8EqiEFwyQyZDUZAjOAUhAYRKGJT+aRr30mWIXJmAjbgABLQYRgB9NbkPbBbwP3LyNqKS4GkMjJa4FoZEUtcS5cW9Au/OuCIz4FrnOWXb8EbxxvHG8cbj/CUDMTueTOAku8eAAAAAElFTkSuQmCC" />
                                 </Button>
                             </Link>
                         </div>
-                        <div className="group-hover:inline-block h-0 bg-theme-400 hidden ">
+                        <div className="group-hover:inline-block h-0 inline-block lg:hidden ">
                                 <Button className="bg-opacity-0 hover:bg-opacity-40 border-none hover:bg-theme-200" onClick={deletePost}>
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nOWUMUsCUBhFz2KD0H8I/AEO7kG7ge2BRNIi2FpEILg0SK7qWjSEremsBA25iTYbuFRzEKUh3CBaup8EIV142znvvOnBf1kZmH07J4tcNPul83eB+YaCSkDWPCU5A4x1BFcCgYqcayfQFFwPBBpfnB93LLgVCFzJOXICecHdQKAnZ9sJbAgeBQL3ctadQErwUyDwLGfNCawA78AUyBmX58S+AQnMTfSiXSNQEPtAYLeSDozAodibSOBS0qkRqIm9iASqks6MwPkiv+u+pLYR+PxaipHAlqQ7I9AXuxkJZCSNjcBYbDoSWAVeA///C5AkuD3g0bh8zuxEL1+efQCsqKh0ZVto4QAAAABJRU5ErkJggg==" />
                                 </Button>
