@@ -44,7 +44,7 @@ export default function Post() {
 
        return post ? (
         loader ? <Spinner/> :
-        <div className="bg-theme-400 flex flex-col min-h-screen py-10 xl:p-0 ">
+        <div className="bg-theme-400 flex flex-col min-h-screen py-10 xl:p-5 ">
             {/* <Container> */}
             
             <div className=" bg-theme-300 lg:scale-75 w-2/3 mx-auto shadow-2xl shadow-theme-200 rounded-2xl ">
