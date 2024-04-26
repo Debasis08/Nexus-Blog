@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { useSelector } from 'react-redux'
 import appwriteService from "../appwrite/configure"
 import {Container, PostCard} from '../components'
 import Spinner from '../components/Spinner'
@@ -8,6 +9,7 @@ import Warn from '../components/Warn'
 export default function AllPosts() {
     const [posts, setPosts] = useState([])
     const [loader, setLoader] = useState(true)
+    const authStatus = useSelector((state) => state.auth.status)
     
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -26,7 +28,7 @@ export default function AllPosts() {
 
     return (loader ? <Spinner/> :
     <div className='w-full lg:p-10 flex justify-center p-8 pt-24 lg:pt-32 overflow-auto bg-theme-400'>
-        <Warn/>
+        {!authStatus && (<div><Warn/></div>)}
         <Container>
                 <div className='grid w-1/2 pr-2 h-full xl:pr-6 gap-3 xl:gap-10 md:gap-5 grid-cols-1'>
                     {cardsColumn1.reverse().map((post) => (
