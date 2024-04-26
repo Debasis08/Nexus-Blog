@@ -99,7 +99,7 @@ export default function PostForm({post}) {
                     className="mb-4 bg-greyish rounded"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     alt='Image is not Uploaded'
-                    // {...register("image", { required: !post })}
+                    {...register("image", { required: !post })}
                 />
                 <label>Content : <span className="required">*</span></label>
                 <RTE name="content" control={control} defaultValue={getValues("content")} />
