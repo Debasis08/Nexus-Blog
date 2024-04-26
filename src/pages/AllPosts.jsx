@@ -28,7 +28,7 @@ export default function AllPosts() {
 
     return (loader ? <Spinner/> :
     <div className='w-full lg:p-10 flex justify-center p-8 pt-24 lg:pt-32 overflow-auto bg-theme-400'>
-        {!authStatus && (<div><Warn/></div>)}
+        {!authStatus && (<Warn/>)}
         <Container>
                 <div className='grid w-1/2 pr-2 h-full xl:pr-6 gap-3 xl:gap-10 md:gap-5 grid-cols-1'>
                     {cardsColumn1.reverse().map((post) => (
