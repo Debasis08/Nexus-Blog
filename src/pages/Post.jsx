@@ -47,7 +47,7 @@ export default function Post() {
         <div className="bg-theme-400 flex flex-col min-h-screen py-10 xl:p-5 ">
             {/* <Container> */}
             
-            <div className=" bg-theme-300 lg:scale-65 w-2/3 mx-auto shadow-2xl lg:-mt-10 shadow-theme-200 rounded-2xl ">
+            <div className=" bg-theme-300 lg:scale-60 w-2/3 mx-auto shadow-2xl lg:-mt-10 shadow-theme-200 rounded-2xl ">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
