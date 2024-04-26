@@ -75,14 +75,16 @@ export default function PostForm({post}) {
   return (
     <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
             <div className="w-2/3 px-3">
+            <label>Title : <span className="required">*</span></label>
                 <Input
-                    label="Title :"
+                    // label="Title :"
                     placeholder="Title"
                     className="mb-4"
                     {...register("title", { required: true })}
                 />
+                <label>Slug :</label>
                 <Input
-                    label="Slug :"
+                    // label="Slug :"
                     placeholder="Slug"
                     className="mb-4"
                     {...register("slug", { required: true })}
@@ -90,14 +92,17 @@ export default function PostForm({post}) {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
                 />
+                <label>Upload Files (jpeg, png, gif): <span className="required">*</span></label>
                 <input
-                    label = "Tap to Upload"                
+                    // label = "Tap to Upload"
                     type="file"
-                    className="mb-4 bg-theme-300 rounded text-white"
+                    className="mb-4 bg-greyish rounded"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
-                    {...register("image", { required: !post })}
+                    alt='Image is not Uploaded'
+                    // {...register("image", { required: !post })}
                 />
-                <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
+                <label>Content : <span className="required">*</span></label>
+                <RTE name="content" control={control} defaultValue={getValues("content")} />
             </div>
 
             <div className="w-1/3 md:pt-56 px-2 mt-7">
